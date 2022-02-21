@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="WA.css"></link>
+
+<div id="first_screen">
+    <div class="back center">
+        <div id="title">Welcome! </div>
+        Choose the experiment you wish to take part in: <br>
+        <div class=buttons id=Steady onclick="start_exp()">STEADY-STATE</div>
+        <div class=buttons id=Transient>TRANSIENTS</div> <br>
+        <div id="credits">Martino Schgor 2022</div>
+    </div>
+</div>
+
+<div id="explanation">
+    <div class="back center">
+        <div>
+            <div id="title">Wear Headphones!</div>
+            (Earbuds are fine too)<br>
+            You will hear an audio signal. The button "ON/OFF" applies an effect that distorces the sound,
+            and the slider below regulates the intensity of the distortion.<br>
+            If the slider is set full left, the distortion is absent and the button will not modify the sound at all.<br>
+            If the slider is set full right, the distortion is maximized.<br>
+            Please, adjust the slider to the point where the button starts having any audible effect, then confirm by clicking NEXT.<br>
+            The test is infinite, when you are fed up, click on QUIT. <br>
+            <button onclick="start_steady()">GOT IT!</button>
+        </div>
+    </div>
+</div>
+
+<div id="main_screen">
+    <div class="back center">
+        <div id="start_container">
+            <button id="switch" onclick="switch_handle()">ON/OFF</button>
+        </div>
+        <div id="slider_container">
+            <input type="range" id="sliderPh" onchange="slider_handle()">
+        </div>
+        <div id="buttons_container">
+            <button onclick="next()">NEXT</button>
+            <button onclick="quit()">QUIT</button>
+        </div>
+    </div>
+    <div id="star_container"></div>
+</div>
+
+<div id="thanks">
+    <div class="back center">
+        <title> Thank you! :) </title>
+        Thank you for taking the test!
+        <div id="score"></div>
+        <img src="https://i.ibb.co/zPPwJ4B/imageedit-1-2342786752.png">
+    </div>
+</div>
+
+<script src=https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js></script>
+<script src=https://www.gstatic.com/firebasejs/7.2.0/firebase-firestore.js></script>
+<script src="WA.js"></script>
